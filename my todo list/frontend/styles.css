@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f6fa;
+    color: #222;
+    min-height: 100vh;
+}
+
+
+/* Header */
+
+.header {
+    background-color: white;
+    padding: 25px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: #222;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.welcome {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 3px;
+}
+
+.profile h2 {
+    font-size: 18px;
+}
+
+.header h1 {
+    font-size: 30px;
+}
+
+
+/* Main */
+
+main {
+    width: 84%;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+
+/* Todo list */
+
+.todo-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+
+/* Todo card */
+
+.todo-item {
+    background-color: white;
+    border-radius: 12px;
+    padding: 22px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    border-left: 5px solid #777;
+}
+
+.todo-content {
+    flex: 1;
+}
+
+.todo-title {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.todo-description {
+    color: #666;
+    line-height: 1.5;
+}
+
+
+/* Status */
+
+.todo-status {
+    min-width: 110px;
+    text-align: center;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+/* Completed todo */
+
+.todo-item.completed {
+    border-left-color: #2e8b57;
+}
+
+.todo-item.completed .todo-title {
+    text-decoration: line-through;
+    color: #777;
+}
+
+.completed-status {
+    background-color: #dff5e8;
+    color: #217346;
+}
+
+
+/* Incomplete todo */
+
+.todo-item.incomplete {
+    border-left-color: #d89b00;
+}
+
+.incomplete-status {
+    background-color: #fff0c7;
+    color: #8a6500;
+}
+
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .header h1 {
+        font-size: 25px;
+    }
+
+    main {
+        width: 92%;
+    }
+
+    .todo-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .todo-status {
+        min-width: auto;
+    }
+}
